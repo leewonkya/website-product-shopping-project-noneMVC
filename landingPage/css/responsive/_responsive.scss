@@ -1,0 +1,189 @@
+$res-extra__small: 'only screen and (max-width: 575.98px)';
+$res-small: 'only screen and (min-width: 576px) and (max-width: 767.98px)';
+$res-medium: 'only screen and (min-width: 768px) and (max-width: 991.8px)';
+@mixin res-extra__small {
+    @media #{$res-extra__small} {
+        @content;
+    }
+}
+
+@include res-extra__small() {
+    .navbar {
+        &-collapse {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin-left: 10px;
+                        font-size: 150%;
+                    }
+                }
+            }
+        }
+    }
+    .header {
+        background-position: center;
+        &-text__box {
+            position: absolute;
+            top: 50%;
+            left: 58%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+        &-text__box::before {
+            content: "";
+            border-left: none;
+        }
+        .heading-text {
+            &__sub {
+                font-size: 60%;
+            }
+            &__title {
+                font-size: 110%;
+                letter-spacing: 4px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            &__content {
+                font-size: 50%;
+                letter-spacing: 2px;
+            }
+        }
+        .btn--white {
+            font-size: 100%;
+            margin-left: 10%;
+        }
+    }
+    .product {
+        &-content {
+            padding: 10px 46px 30px;
+        }
+        &-box {
+            img:hover+.product-text__title {
+                transform: translateY(-500%);
+                -webkit-transform: translateY(-500%);
+                -moz-transform: translateY(-500%);
+                -ms-transform: translateY(-500%);
+                -o-transform: translateY(-500%);
+            }
+        }
+    }
+    .contact {
+        &-content {
+            padding: 10px 10px 35px;
+        }
+    }
+    .page-footer {
+        .footer-link {
+            font-size: 120%;
+        }
+    }
+}
+
+@mixin res-small {
+    @media #{$res-small} {
+        @content;
+    }
+}
+
+@include res-small() {
+    .header {
+        background-position: top;
+        &-text__box {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            .heading-text {
+                &__title {
+                    font-size: 200%;
+                    letter-spacing: 10px;
+                }
+                &__content {
+                    font-size: 60%;
+                    padding-bottom: 10px;
+                }
+            }
+            .btn--white {
+                font-size: 100%;
+            }
+        }
+        &-text__box::before {
+            content: "";
+            border-left: none;
+        }
+    }
+}
+
+@mixin res-medium {
+    @media #{$res-medium} {
+        @content;
+    }
+}
+
+@include res-medium() {
+    .header {
+        &-text__box {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            .heading-text {
+                &__title {
+                    font-size: 200%;
+                }
+                &__content {
+                    font-size: 60%;
+                }
+            }
+        }
+        .btn--white {
+            font-size: 80%;
+        }
+    }
+    .product {
+        &-content {
+            padding: 10px 10px 30px;
+        }
+        &-box {
+            .product-text__title {
+                font-size: 85%;
+            }
+            img:hover+.product-text__title {
+                transform: translateY(-370%);
+                -webkit-transform: translateY(-370%);
+                -moz-transform: translateY(-370%);
+                -ms-transform: translateY(-370%);
+                -o-transform: translateY(-370%);
+            }
+        }
+    }
+    .contact {
+        &-box {
+            .fab,
+            .fas,
+            .far {
+                font-size: 300%;
+            }
+        }
+    }
+    .page-footer {
+        .footer-text {
+            .footer-link {
+                font-size: 120%;
+            }
+        }
+    }
+}
